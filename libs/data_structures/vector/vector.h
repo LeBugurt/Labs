@@ -11,4 +11,10 @@ vector createVector(size_t n);
 
 void reserve(vector *v, size_t newCapacity);
 
+void clear(vector *v);
+
+void shrinkToFit(vector *v);
+
+void deleteVector(vector *v);
+
 #endif //LABS_VECTOR_H

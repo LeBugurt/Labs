@@ -4,7 +4,8 @@
 
 int main() {
 
-    vector v = createVector(0);
+    vector v = createVector(10);
+    reserve(&v, 0);
 
     return 0;
 }

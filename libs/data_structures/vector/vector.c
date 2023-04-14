@@ -48,7 +48,7 @@ bool isFull(vector *v) {
 }
 
 int getVectorValue(vector *v, size_t i) {
-    return v->data[i - 1];
+    return v->data[i];
 }
 
 void pushBack(vector *v, int x) {
@@ -85,7 +85,7 @@ void test_pushBack_fullVector() {
 
 
 void popBack(vector *v) {
-    if (v->size == 0) {
+    if (isEmpty(v)) {
         fprintf(stderr, "bad alloc");
         exit(1);
     } else {
@@ -152,6 +152,6 @@ void test_front_oneElementInVector() {
     vector v = createVector(1);
     v.data[0] = 31;
     v.size = 1;
-    int *a = back(&v);
+    int *a = front(&v);
     assert(*a == 31);
 }
